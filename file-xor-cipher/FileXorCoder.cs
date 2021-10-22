@@ -33,10 +33,10 @@ namespace file_xor_cipher
             strWriter.Close();
         }
 
-        public void codeFile(string path)
+        public void codeFile(string path, int key)
         {
             string fileText = openFile(path);
-            string codedText = code(fileText, 12);
+            string codedText = code(fileText, key);
             saveFile(codedText, path);
         }
     }
